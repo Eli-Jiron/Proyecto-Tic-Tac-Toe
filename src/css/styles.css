@@ -1,0 +1,16 @@
+.border {
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.contenido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tablero {
+    display: flex;
+    justify-content: center;
+}
