@@ -52,4 +52,15 @@ function validarGane() {
             iniciar = false;
         }
     }
+
+    //Validación diagonal
+    if (tablero[0][0] !== '' && tablero[0][0] === tablero[1][1] && tablero[0][0] === tablero[2][2]) {
+        console.log('gane diagonal');
+        iniciar = false;
+    }
+    
+    if (tablero[0][2] !== '' && tablero[0][2] === tablero[1][1] && tablero[0][2] === tablero[2][0]) {
+        console.log('gane diagonal');
+        iniciar = false;
+    }
 }
