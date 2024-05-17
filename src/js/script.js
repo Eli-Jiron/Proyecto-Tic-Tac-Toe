@@ -44,4 +44,12 @@ function validarGane() {
             iniciar = false;
         }
     }
+
+    //Validación vertical
+    for (let c = 0; c < tablero.length; c++) {
+        if (tablero[0][c] !== '' && tablero[0][c] === tablero[1][c] && tablero[0][c] === tablero[2][c]) {
+            console.log('gane vertical');
+            iniciar = false;
+        }
+    }
 }
