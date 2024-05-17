@@ -63,4 +63,10 @@ function validarGane() {
         console.log('gane diagonal');
         iniciar = false;
     }
+
+    //Validación Empate 
+    if (contador === 9) {
+        console.log('empate lolol');
+        iniciar = false;
+    }
 }
