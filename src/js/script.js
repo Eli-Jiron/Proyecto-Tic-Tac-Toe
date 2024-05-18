@@ -6,6 +6,7 @@ let tablero = [
 
 console.log(tablero);
 
+let btnReinicio = document.getElementById('btnReinicio');
 let valor = document.getElementsByClassName('valor');
 console.log(valor);
 
@@ -70,3 +71,17 @@ function validarGane() {
         iniciar = false;
     }
 }
+
+btnReinicio.addEventListener('click', function () {
+    for (let i = 0; i < valor.length; i++) {
+        valor[i].textContent = ''
+    }
+    tablero = [
+        ['','',''],
+        ['','',''],
+        ['','','']
+    ];
+    iniciar = true;
+    contador = 0;
+    clicks = 0;
+})
