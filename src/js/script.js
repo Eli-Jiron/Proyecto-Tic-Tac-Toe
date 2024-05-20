@@ -1,6 +1,8 @@
 let btnReinicio = document.getElementById('btnReinicio');
 let resultados = document.getElementById('resultados');
 let valor = document.getElementsByClassName('valor');
+let contJugador = document.getElementById('contJugador');
+let contBot = document.getElementById('contBot');
 
 let tablero = [
     ['','',''],
@@ -22,7 +24,7 @@ let iniciarBot = true;
 
 function juegoJugador(fila,columna) {
     if (iniciar) {
-        if (clicks === 0 && tablero[fila][columna] === '') {
+        if (tablero[fila][columna] === '') {
             tablero[fila][columna] = 'X';
             valor[pos[fila][columna]].textContent  = '🍎';
             resultados.textContent = 'Turno de 🍐';
@@ -41,7 +43,7 @@ function juegoJugador(fila,columna) {
 
 function juegoBot(fila,columna) {
     if (iniciarBot) {
-        if (clicks === 1 && tablero[fila][columna] === '') {
+        if (tablero[fila][columna] === '') {
             tablero[fila][columna] = 'O';
             valor[pos[fila][columna]].textContent  = '🍐';
             resultados.textContent = 'Turno de 🍎';
@@ -51,7 +53,7 @@ function juegoBot(fila,columna) {
         } else {
             setTimeout(() => {
                 bot();
-              }, 30);
+              }, 25);
         }
         mostrarResultados();
     }
@@ -59,12 +61,10 @@ function juegoBot(fila,columna) {
 
 function bot() {
     if (iniciarBot && clicks === 1) {
-        console.log('hola');
         let condicion = 0;
         while (condicion == 0) {
             fila = Math.floor(Math.random() * 3);
             columna = Math.floor(Math.random() * 3);
-            console.log(fila, columna);
             juegoBot(fila,columna);
             condicion = 1;
         }
@@ -116,9 +116,11 @@ function mostrarResultados() {
     if (result === 1) {
         if (clicks === 1) {
             resultados.textContent = '🍎 ganó';
+            contJugador.textContent = parseInt(contJugador.textContent)+1;
         }
         if (clicks === 0) {
             resultados.textContent = '🍐 ganó';
+            contBot.textContent = parseInt(contBot.textContent)+1;
         }
     }
     if (result === 0) {
@@ -130,7 +132,6 @@ btnReinicio.addEventListener('click', function () {
     for (let i = 0; i < valor.length; i++) {
         valor[i].textContent = '';
     }
-    resultados.textContent = '';
     resultados.textContent = 'Turno de 🍎';
     tablero = [
         ['','',''],
