@@ -17,3 +17,8 @@
     display: flex;
     justify-content: center;
 }
+
+.contador {
+    display: flex;
+    gap: 15px;
+}
