@@ -1,3 +1,8 @@
+body{
+    user-select: none;
+    text-align: center;
+}
+
 .border {
     border: 2px solid black;
     width: 100px;
@@ -10,7 +15,6 @@
     justify-content: center;
     font-size: 50px;
     cursor: pointer;
-    user-select: none;
 }
 
 .tablero {
@@ -21,4 +25,10 @@
 .contador {
     display: flex;
     gap: 15px;
+}
+
+.fuente {
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
 }
