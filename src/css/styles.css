@@ -1,15 +1,74 @@
 body{
     user-select: none;
     text-align: center;
+    background-image: url(/Proyecto-Tic-Tac-Toe/src/img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.border {
-    border: 2px solid black;
-    width: 100px;
-    height: 100px;
+
+#casilla1{
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 7px;
 }
+
+#casilla2{
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 7px;
+}
+
+#casilla3{
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 7px;
+}
+
+#casilla4{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 7px;
+}
+
+#casilla5{
+    border: 3px solid black;
+    border-radius: 7px;
+}
+
+#casilla6{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-radius: 7px;
+}
+
+#casilla7{
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 7px;
+}
+
+#casilla8{
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 7px;
+}
+
+#casilla9{
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 7px;
+}
+
+
 
 .contenido{
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
