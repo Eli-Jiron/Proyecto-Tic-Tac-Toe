@@ -1,74 +1,84 @@
 body{
     user-select: none;
     text-align: center;
-    background-image: url(/Proyecto-Tic-Tac-Toe/src/img/fondo2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0;
 }
 
 
 #casilla1{
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
+    border-right: 3px solid rgb(179, 155, 36);
+    border-bottom: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 #casilla2{
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
+    border-left: 3px solid rgb(250, 217, 51);
+    border-right: 3px solid rgb(179, 155, 36);
+    border-bottom: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 #casilla3{
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
+    border-left: 3px solid rgb(250, 217, 51);
+    border-bottom: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 #casilla4{
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    border-right: 3px solid black;
+    border-top: 3px solid rgb(179, 155, 36);
+    border-bottom: 3px solid rgb(250, 217, 51);
+    border-right: 3px solid rgb(179, 155, 36);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 #casilla5{
-    border: 3px solid black;
+    border-top: 3px solid rgb(179, 155, 36);
+    border-bottom: 3px solid rgb(250, 217, 51);
+    border-right: 3px solid rgb(179, 155, 36);
+    border-left: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 #casilla6{
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    border-left: 3px solid black;
+    border-top: 3px solid rgb(179, 155, 36);
+    border-bottom: 3px solid rgb(250, 217, 51);
+    border-left: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 #casilla7{
-    border-top: 3px solid black;
-    border-right: 3px solid black;
+    border-top: 3px solid rgb(179, 155, 36);
+    border-right: 3px solid rgb(179, 155, 36);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 #casilla8{
-    border-top: 3px solid black;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border-top: 3px solid rgb(179, 155, 36);
+    border-left: 3px solid rgb(250, 217, 51);
+    border-right: 3px solid rgb(179, 155, 36);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 #casilla9{
-    border-left: 3px solid black;
-    border-top: 3px solid black;
+    border-left: 3px solid rgb(250, 217, 51);
+    border-top: 3px solid rgb(179, 155, 36);
     border-radius: 7px;
+    backdrop-filter: blur(13px);
 }
 
 
 
 .contenido{
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,4 +100,10 @@ body{
     font-size: 22px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
+}
+
+#btnReinicio {
+    background-color: rgb(236, 236, 236);
+    border-color: rgb(250, 217, 51);
+    border-radius: 5px;
 }
