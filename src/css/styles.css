@@ -1,15 +1,25 @@
 body{
     user-select: none;
     text-align: center;
+    background-color: #fffaf6;
     margin: 0;
 }
 
+#borderContador{
+    width: 200px;
+    border-top: 3px solid rgb(250, 217, 51);
+    border-left: 3px solid rgb(250, 217, 51);
+    border-right: 3px solid rgb(179, 155, 36);
+    border-bottom: 3px solid rgb(179, 155, 36);
+    border-radius: 7px;
+    background-color: #f7eadd;
+    margin-bottom: 15px;
+}
 
 #casilla1{
     border-right: 3px solid rgb(179, 155, 36);
     border-bottom: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
 
 #casilla2{
@@ -17,14 +27,12 @@ body{
     border-right: 3px solid rgb(179, 155, 36);
     border-bottom: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
 
 #casilla3{
     border-left: 3px solid rgb(250, 217, 51);
     border-bottom: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
 
 #casilla4{
@@ -32,7 +40,6 @@ body{
     border-bottom: 3px solid rgb(250, 217, 51);
     border-right: 3px solid rgb(179, 155, 36);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
 
 #casilla5{
@@ -41,7 +48,6 @@ body{
     border-right: 3px solid rgb(179, 155, 36);
     border-left: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
 
 #casilla6{
@@ -49,14 +55,12 @@ body{
     border-bottom: 3px solid rgb(250, 217, 51);
     border-left: 3px solid rgb(250, 217, 51);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
 
 #casilla7{
     border-top: 3px solid rgb(179, 155, 36);
     border-right: 3px solid rgb(179, 155, 36);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
 
 #casilla8{
@@ -64,17 +68,13 @@ body{
     border-left: 3px solid rgb(250, 217, 51);
     border-right: 3px solid rgb(179, 155, 36);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
 
 #casilla9{
     border-left: 3px solid rgb(250, 217, 51);
     border-top: 3px solid rgb(179, 155, 36);
     border-radius: 7px;
-    backdrop-filter: blur(13px);
 }
-
-
 
 .contenido{
     width: 110px;
@@ -102,8 +102,24 @@ body{
     font-weight: bolder;
 }
 
+#resultados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 170px;
+    margin-top: 15px;
+    border-top: 3px solid rgb(250, 217, 51);
+    border-left: 3px solid rgb(250, 217, 51);
+    border-bottom: 3px solid rgb(179, 155, 36);
+    border-right: 3px solid rgb(179, 155, 36);
+    border-radius: 7px;
+        background-color: #f7eadd;
+}
+
 #btnReinicio {
-    background-color: rgb(236, 236, 236);
+    margin-top: 5px;
+    background-color: #f7eadd;
     border-color: rgb(250, 217, 51);
     border-radius: 5px;
 }
