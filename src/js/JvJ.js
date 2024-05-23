@@ -65,7 +65,15 @@ function validarVictoria() {
 
 function resultadosPartida() {
     let resultado = validarVictoria()
-
+    if (resultado === 1) {
+        if (jugador === 1) {
+            console.log('Ganó 🍎');
+        } else if (jugador === 0) {
+            console.log('Ganó 🍐');
+        }
+    } else if (resultado === 0) {
+        console.log('empate');
+    }
 }
 
 btnReinicio.addEventListener('click', function () {
