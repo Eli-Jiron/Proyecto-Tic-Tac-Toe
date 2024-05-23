@@ -8,31 +8,38 @@
 </head>
 <body>
     <a href="index.html">Inicio</a>
-    <div>
-        <div>🍎: </div>
-        <div class="contadores">0</div>
-        <div>🍐: </div>
-        <div class="contadores">0</div>
+    <div class="tablero">
+        <div id="contador">
+            <div class="tablero">Victorias</div>
+            <div id="victorias">
+                <div>🍎: </div>
+                <div class="contadores">0</div>
+                <div>🍐: </div>
+                <div class="contadores">0</div>
+            </div>
+        </div>
     </div>
     <div>
         <div class="tablero">
-            <div onclick="juego(0,0,0)" class="casillas">1</div>
-            <div onclick="juego(0,1,1)" class="casillas">2</div>
-            <div onclick="juego(0,2,2)" class="casillas">3</div>
+            <div onclick="juego(0,0,0)" class="casillas" id="casilla1"></div>
+            <div onclick="juego(0,1,1)" class="casillas" id="casilla2"></div>
+            <div onclick="juego(0,2,2)" class="casillas" id="casilla3"></div>
         </div>
         <div class="tablero">
-            <div onclick="juego(1,0,3)" class="casillas">4</div>
-            <div onclick="juego(1,1,4)" class="casillas">5</div>
-            <div onclick="juego(1,2,5)" class="casillas">6</div>
+            <div onclick="juego(1,0,3)" class="casillas" id="casilla4"></div>
+            <div onclick="juego(1,1,4)" class="casillas" id="casilla5"></div>
+            <div onclick="juego(1,2,5)" class="casillas" id="casilla6"></div>
         </div>
         <div class="tablero">
-            <div onclick="juego(2,0,6)" class="casillas">7</div>
-            <div onclick="juego(2,1,7)" class="casillas">8</div>
-            <div onclick="juego(2,2,8)" class="casillas">9</div>
+            <div onclick="juego(2,0,6)" class="casillas" id="casilla7"></div>
+            <div onclick="juego(2,1,7)" class="casillas" id="casilla8"></div>
+            <div onclick="juego(2,2,8)" class="casillas" id="casilla9"></div>
         </div>
     </div>
      
-    <div id="estado">Turno de 🍎</div>
+    <div class="tablero">
+        <div id="estado">Turno de 🍎</div>
+    </div>
     <button id="btnReinicio">Reiniciar</button>
 
     <script src="./src/js/JvJ.js"></script>
