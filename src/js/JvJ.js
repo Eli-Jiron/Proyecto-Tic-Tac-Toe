@@ -18,17 +18,19 @@ function juego(fila,columna,posicion) {
         if (tablero[fila][columna] === '' && jugador === 0) {
             tablero[fila][columna] = 'X';
             casillas[posicion].textContent = '🍎';
+            estado.textContent = 'Turno de 🍐';
             turnos++;
             jugador = 1;
             console.log(tablero);
         } else if (tablero[fila][columna] === '' && jugador === 1) {
             tablero[fila][columna] = 'O';
             casillas[posicion].textContent = '🍐';
+            estado.textContent = 'Turno de 🍎';
             turnos++;
             jugador = 0;
             console.log(tablero);
         } else {
-            console.log('Posición ya usada');
+            estado.textContent = 'Posición ya usada'
         }
         resultadosPartida()
     }
@@ -67,12 +69,12 @@ function resultadosPartida() {
     let resultado = validarVictoria()
     if (resultado === 1) {
         if (jugador === 1) {
-            console.log('Ganó 🍎');
+            estado.textContent = '¡Ganó 🍎!';
         } else if (jugador === 0) {
-            console.log('Ganó 🍐');
+            estado.textContent = '¡Ganó 🍐!';
         }
     } else if (resultado === 0) {
-        console.log('empate');
+        estado.textContent = '¡Empate!'
     }
 }
 
@@ -85,7 +87,7 @@ btnReinicio.addEventListener('click', function () {
         ['','',''],
         ['','','']
     ];
-    inicio = true
+    inicio = true;
     turnos = 0;
     jugador = 0;
     estado.textContent = 'Turno de 🍎';
