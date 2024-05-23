@@ -16,3 +16,64 @@ body{
     font-size: 50px;
     cursor: pointer;
 }
+
+#casilla1{
+    border-bottom: 3px solid #389bd9;
+    border-right: 3px solid #286e99;
+    border-radius: 7px;
+}
+
+#casilla2{
+    border-bottom: 3px solid #389bd9;
+    border-left: 3px solid #389bd9;
+    border-right: 3px solid #286e99;
+    border-radius: 7px;
+}
+
+#casilla3{
+    border-bottom: 3px solid #389bd9;
+    border-left: 3px solid #389bd9;
+    border-radius: 7px;
+}
+
+#casilla4{
+    border-top: 3px solid #286e99;
+    border-bottom: 3px solid #389bd9;
+    border-right: 3px solid #286e99;
+    border-radius: 7px;
+}
+
+#casilla5{
+    border-top: 3px solid #286e99;
+    border-bottom: 3px solid #389bd9;
+    border-right: 3px solid #286e99;
+    border-left: 3px solid #389bd9;
+    border-radius: 7px;
+    
+}
+
+#casilla6{
+    border-top: 3px solid #286e99;
+    border-bottom: 3px solid #389bd9;
+    border-left: 3px solid #389bd9;
+    border-radius: 7px;
+}
+
+#casilla7{
+    border-top: 3px solid #286e99;
+    border-right: 3px solid #286e99;
+    border-radius: 7px;
+}
+
+#casilla8{
+    border-top: 3px solid #286e99;
+    border-right: 3px solid #286e99;
+    border-left: 3px solid #389bd9;
+    border-radius: 7px;
+}
+
+#casilla9{
+    border-top: 3px solid #286e99;
+    border-left: 3px solid #389bd9;
+    border-radius: 7px;
+}

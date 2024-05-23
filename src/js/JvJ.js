@@ -29,7 +29,7 @@ function juego(fila,columna,posicion) {
             turnos++;
             jugador = 0;
         } else {
-            estado.textContent = 'Posición ya usada'
+            estado.textContent = 'Posición ya usada';
         }
         resultadosPartida()
     }
@@ -75,7 +75,7 @@ function resultadosPartida() {
             contador[1].textContent = parseInt(contador[1].textContent)+1;
         }
     } else if (resultado === 0) {
-        estado.textContent = '¡Empate!'
+        estado.textContent = '¡Empate!';
     }
 }
 
