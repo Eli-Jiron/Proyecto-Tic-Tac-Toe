@@ -1,4 +1,7 @@
 let casillas = document.getElementsByClassName('casillas');
+let btnReinicio = document.getElementById('btnReinicio');
+let estado = document.getElementById('estado');
+
 let tablero = [
     ['','',''],
     ['','',''],
@@ -62,4 +65,20 @@ function validarVictoria() {
 
 function resultadosPartida() {
     let resultado = validarVictoria()
+
 }
+
+btnReinicio.addEventListener('click', function () {
+    for (let i = 0; i < casillas.length; i++) {
+        casillas[i].textContent = '';
+    }
+    tablero = [
+        ['','',''],
+        ['','',''],
+        ['','','']
+    ];
+    inicio = true
+    turnos = 0;
+    jugador = 0;
+    estado.textContent = 'Turno de 🍎';
+})
