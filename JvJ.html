@@ -8,13 +8,15 @@
 </head>
 <body>
     <a href="index.html">Inicio</a>
-    <div>
-        <div>Victorias</div>
-        <div>
-            <div>🍎: </div>
-            <div class="contadores">0</div>
-            <div>🍐: </div>
-            <div class="contadores">0</div>
+    <div class="tablero">
+        <div id="contador">
+            <div class="tablero">Victorias</div>
+            <div id="victorias">
+                <div>🍎: </div>
+                <div class="contadores">0</div>
+                <div>🍐: </div>
+                <div class="contadores">0</div>
+            </div>
         </div>
     </div>
     <div>
@@ -35,7 +37,9 @@
         </div>
     </div>
      
-    <div id="estado">Turno de 🍎</div>
+    <div class="tablero">
+        <div id="estado">Turno de 🍎</div>
+    </div>
     <button id="btnReinicio">Reiniciar</button>
 
     <script src="./src/js/JvJ.js"></script>
