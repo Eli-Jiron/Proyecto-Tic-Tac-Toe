@@ -4,6 +4,14 @@ let valor = document.getElementsByClassName('valor');
 let contJugador = document.getElementById('contJugador');
 let contBot = document.getElementById('contBot');
 
+//Llama al localStorage y lo almacena en una variable
+let vJ = localStorage.getItem('winsJ');
+let vCPU = localStorage.getItem('winsCPU');
+
+//Vuelve el contador en el valor de esa variable
+contJugador.textContent = vJ;
+contBot.textContent = vCPU;
+
 //Una matriz con espacios vacíos que guardará el contenido de las casillas
 let tablero = [
     ['','',''],
@@ -152,18 +160,23 @@ function mostrarResultados() {
         if (clicks === 1) {
             //Muestra este mensaje al usuario
             resultados.textContent = '¡🍎 ganó!';
-            //Suma 1 a su contador de victorias
-            contJugador.textContent = parseInt(contJugador.textContent)+1;
+            //Suma 1 a su contador de victorias y lo guarda en el localStorage
+            vJ++;
+            localStorage.setItem('winsJ', vJ);
+            contJugador.textContent = vJ;
         }
         //En caso de que clicks sea 0, el ganador es 🍐
         if (clicks === 0) {
             //Muestra este mensaje al usuario
             resultados.textContent = '¡🍐 ganó!';
-            //Suma 1 a su contador de victorias
-            contBot.textContent = parseInt(contBot.textContent)+1;
+            //Suma 1 a su contador de victorias y lo guarda en el localStorage
+            vCPU++;
+            localStorage.setItem('winsCPU', vCPU);
+            contBot.textContent = vCPU;
         }
     }
     if (result === 0) {
+        //En caso de empate, muestra ese mensaje
         resultados.textContent = '¡Empate!';
     }
 }
