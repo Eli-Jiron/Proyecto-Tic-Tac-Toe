@@ -1,4 +1,5 @@
 let casillas = document.getElementsByClassName('casillas');
+let contador = document.getElementsByClassName('contadores');
 let btnReinicio = document.getElementById('btnReinicio');
 let estado = document.getElementById('estado');
 
@@ -21,14 +22,12 @@ function juego(fila,columna,posicion) {
             estado.textContent = 'Turno de 🍐';
             turnos++;
             jugador = 1;
-            console.log(tablero);
         } else if (tablero[fila][columna] === '' && jugador === 1) {
             tablero[fila][columna] = 'O';
             casillas[posicion].textContent = '🍐';
             estado.textContent = 'Turno de 🍎';
             turnos++;
             jugador = 0;
-            console.log(tablero);
         } else {
             estado.textContent = 'Posición ya usada'
         }
@@ -70,8 +69,10 @@ function resultadosPartida() {
     if (resultado === 1) {
         if (jugador === 1) {
             estado.textContent = '¡Ganó 🍎!';
+            contador[0].textContent = parseInt(contador[0].textContent)+1;
         } else if (jugador === 0) {
             estado.textContent = '¡Ganó 🍐!';
+            contador[1].textContent = parseInt(contador[1].textContent)+1;
         }
     } else if (resultado === 0) {
         estado.textContent = '¡Empate!'
