@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe JvCPU</title>
+    <link rel="stylesheet" href="./src/css/JvCPU.css">
+</head>
+<body>
+    <a href="index.html">Inicio</a> 
+    <div class="tablero">
+        <div id="borderContador">
+            <div class="fuente">Victorias</div>
+            <div class="tablero , fuente">
+                <div class="contador">
+                    <div>🍎:</div>
+                    <div id="contJugador">0</div>
+                    <div>🍐:</div>
+                    <div id="contBot">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="tablero">
+            <div onclick="juegoJugador(0,0)" class="valor , contenido" id="casilla1"></div>
+            <div onclick="juegoJugador(0,1)" class="valor , contenido" id="casilla2"></div>
+            <div onclick="juegoJugador(0,2)" class="valor , contenido" id="casilla3"></div>
+        </div>
+        <div class="tablero">
+            <div onclick="juegoJugador(1,0)" class="valor , contenido" id="casilla4"></div>
+            <div onclick="juegoJugador(1,1)" class="valor , contenido" id="casilla5"></div>
+            <div onclick="juegoJugador(1,2)" class="valor , contenido" id="casilla6"></div>
+        </div>
+        <div class="tablero">
+            <div onclick="juegoJugador(2,0)" class="valor , contenido" id="casilla7"></div>
+            <div onclick="juegoJugador(2,1)" class="valor , contenido" id="casilla8"></div>
+            <div onclick="juegoJugador(2,2)" class="valor , contenido" id="casilla9"></div>
+        </div>
+    </div>
+
+    <div class="tablero">
+        <div id="resultados" class="fuente">Turno de 🍎</div>
+        <div></div>
+    </div>
+
+    <button id="btnReinicio" class="fuente" >Reiniciar</button>
+
+    <script src="./src/js/JvCPU.js"></script>
+</body>
+</html>
