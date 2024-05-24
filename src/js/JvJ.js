@@ -4,12 +4,16 @@ let btnReinicio = document.getElementById('btnReinicio');
 let estado = document.getElementById('estado');
 
 //Llama al localStorage y lo almacena en una variable
-let vJ1 = localStorage.getItem('winsJ1');
-let vJ2 = localStorage.getItem('winsJ2');
+let datosInicio = JSON.parse(localStorage.getItem('datosInicio'));
+let datosRegistro = JSON.parse(localStorage.getItem('datos'));
 
 //Vuelve el contador en el valor de esa variable
-contador[1].textContent = vJ2;
-contador[0].textContent = vJ1;
+for (let i = 0; i < datosRegistro.length; i++) {
+    if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
+        contador[0].textContent = datosRegistro[i].J1;
+        contador[1].textContent = datosRegistro[i].J2;
+    }
+}
 
 //Una matriz con espacios vacíos que guardará el contenido de las casillas
 let tablero = [
@@ -116,17 +120,25 @@ function resultadosPartida() {
             //Muestra este mensaje al usuario
             estado.textContent = '¡Ganó 🍎!';
             //Suma 1 a su contador de victorias y lo guarda en el localStorage
-            vJ1++;
-            localStorage.setItem('winsJ1', vJ1);
-            contador[0].textContent = vJ1;
+            for (let i = 0; i < datosRegistro.length; i++) {
+                if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
+                    datosRegistro[i].J1++                   
+                    contador[0].textContent = datosRegistro[i].J1;
+                    localStorage.setItem('datos', JSON.stringify(datosRegistro))
+                }
+            }
         }//En caso de que jugador sea 0, el ganador es 🍐
         else if (jugador === 0) {
             //Muestra este mensaje al usuario
             estado.textContent = '¡Ganó 🍐!';
             //Suma 1 a su contador de victorias y lo guarda en el localStorage
-            vJ2++;
-            localStorage.setItem('winsJ2', vJ2);
-            contador[1].textContent = vJ2;
+            for (let i = 0; i < datosRegistro.length; i++) {
+                if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
+                    datosRegistro[i].J2++                   
+                    contador[1].textContent = datosRegistro[i].J2;
+                    localStorage.setItem('datos', JSON.stringify(datosRegistro))
+                }
+            }
         }
     } else if (resultado === 0) {
         //En caso de empate, muestra ese mensaje

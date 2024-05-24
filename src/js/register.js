@@ -15,6 +15,10 @@ function registro() {
                 usuario: usuario.value,
                 correo: correo.value,
                 contraseña: contraseña.value,
+                Jwins: 0,
+                CPUwins: 0,
+                J1: 0,
+                J2: 0,
             };
         
             datosRegistro.push(datosUsuario);
