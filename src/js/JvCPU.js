@@ -5,12 +5,16 @@ let contJugador = document.getElementById('contJugador');
 let contBot = document.getElementById('contBot');
 
 //Llama al localStorage y lo almacena en una variable
-let vJ = localStorage.getItem('winsJ');
-let vCPU = localStorage.getItem('winsCPU');
+let datosInicio = JSON.parse(localStorage.getItem('datosInicio'));
+let datosRegistro = JSON.parse(localStorage.getItem('datos'));
 
 //Vuelve el contador en el valor de esa variable
-contJugador.textContent = vJ;
-contBot.textContent = vCPU;
+for (let i = 0; i < datosRegistro.length; i++) {
+    if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
+        contJugador.textContent = datosRegistro[i].Jwins;
+        contBot.textContent = datosRegistro[i].CPUwins;
+    }
+}
 
 //Una matriz con espacios vacíos que guardará el contenido de las casillas
 let tablero = [
@@ -161,18 +165,26 @@ function mostrarResultados() {
             //Muestra este mensaje al usuario
             resultados.textContent = '¡🍎 ganó!';
             //Suma 1 a su contador de victorias y lo guarda en el localStorage
-            vJ++;
-            localStorage.setItem('winsJ', vJ);
-            contJugador.textContent = vJ;
+            for (let i = 0; i < datosRegistro.length; i++) {
+                if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
+                    datosRegistro[i].Jwins++                   
+                    contJugador.textContent = datosRegistro[i].Jwins;
+                    localStorage.setItem('datos', JSON.stringify(datosRegistro))
+                }
+            }
         }
         //En caso de que clicks sea 0, el ganador es 🍐
         if (clicks === 0) {
             //Muestra este mensaje al usuario
             resultados.textContent = '¡🍐 ganó!';
             //Suma 1 a su contador de victorias y lo guarda en el localStorage
-            vCPU++;
-            localStorage.setItem('winsCPU', vCPU);
-            contBot.textContent = vCPU;
+            for (let i = 0; i < datosRegistro.length; i++) {
+                if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
+                    datosRegistro[i].CPUwins++                   
+                    contBot.textContent = datosRegistro[i].CPUwins;
+                    localStorage.setItem('datos', JSON.stringify(datosRegistro))
+                }
+            }
         }
     }
     if (result === 0) {
@@ -197,3 +209,4 @@ btnReinicio.addEventListener('click', function () {
     contador = 0;
     clicks = 0;
 });
+

@@ -13,6 +13,11 @@ function validarUsuario() {
             let buscar = datosRegistro.find(datosUsuario => correo.value === datosUsuario.correo && contraseña.value === datosUsuario.contraseña);
             if (buscar) {
                 mensajes.textContent = 'Redireccionando...';
+                let inicio = {
+                    correo: correo.value,
+                    contraseña: contraseña.value,
+                }
+                localStorage.setItem('datosInicio', JSON.stringify(inicio));
                 setTimeout(() => {
                     window.location.href = 'index.html';
                 }, 1000);

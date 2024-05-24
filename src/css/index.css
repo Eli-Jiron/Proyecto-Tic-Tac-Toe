@@ -11,7 +11,6 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 35px;
-    margin-top: 225px;
 }
 
 #titulo {
@@ -38,4 +37,9 @@ body{
     width: 130px;
     border: 3px solid black;
     border-radius: 10px;
+}
+
+#contador{
+    display: flex;
+    justify-content: space-between;
 }
