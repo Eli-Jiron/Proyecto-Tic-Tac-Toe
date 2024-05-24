@@ -3,13 +3,14 @@ let contador = document.getElementsByClassName('contadores');
 let btnReinicio = document.getElementById('btnReinicio');
 let estado = document.getElementById('estado');
 
-//Llama al localStorage y lo almacena en una variable
+//Llama al localStorage y parsea su contenido
 let datosInicio = JSON.parse(localStorage.getItem('datosInicio'));
 let datosRegistro = JSON.parse(localStorage.getItem('datos'));
 
-//Vuelve el contador en el valor de esa variable
 for (let i = 0; i < datosRegistro.length; i++) {
+    //Compara los datos de cada posición con los datos dados por el usuario
     if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
+         //Si lo datos de la posición coinciden con los datos dados por el usuario, manipula el resto de datos de esa posición
         contador[0].textContent = datosRegistro[i].J1;
         contador[1].textContent = datosRegistro[i].J2;
     }
@@ -119,11 +120,15 @@ function resultadosPartida() {
         if (jugador === 1) {
             //Muestra este mensaje al usuario
             estado.textContent = '¡Ganó 🍎!';
-            //Suma 1 a su contador de victorias y lo guarda en el localStorage
             for (let i = 0; i < datosRegistro.length; i++) {
+                //Compara los datos de cada posición con los datos dados por el usuario
                 if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
-                    datosRegistro[i].J1++                   
+                     //Si lo datos de la posición coinciden con los datos dados por el usuario, manipula el resto de datos de esa posición
+                    //Suma 1 al objeto de esa posición
+                    datosRegistro[i].J1++;
+                    //Lo muestra en el html
                     contador[0].textContent = datosRegistro[i].J1;
+                    //Actualiza los datos de localStorage
                     localStorage.setItem('datos', JSON.stringify(datosRegistro))
                 }
             }
@@ -133,9 +138,14 @@ function resultadosPartida() {
             estado.textContent = '¡Ganó 🍐!';
             //Suma 1 a su contador de victorias y lo guarda en el localStorage
             for (let i = 0; i < datosRegistro.length; i++) {
+                //Compara los datos de cada posición con los datos dados por el usuario
                 if (datosRegistro[i].correo === datosInicio.correo && datosRegistro[i].contraseña === datosInicio.contraseña) {
-                    datosRegistro[i].J2++                   
+                    //Si lo datos de la posición coinciden con los datos dados por el usuario, manipula el resto de datos de esa posición
+                    //Suma 1 al objeto de esa posición
+                    datosRegistro[i].J2++;
+                    //Lo muestra en el html
                     contador[1].textContent = datosRegistro[i].J2;
+                    //Actualiza los datos de localStorage
                     localStorage.setItem('datos', JSON.stringify(datosRegistro))
                 }
             }
