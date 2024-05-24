@@ -10,12 +10,14 @@ let datosRegistro = JSON.parse(localStorage.getItem('datos')) || [];
 function validarUsuario() {
     if (correo.value && contraseña.value !== '') {
         if (validarEmail.test(correo.value)) {
-            for (let i = 0; i < datosRegistro.length; i++) {
-                if (correo.value === datosRegistro[i].correo && contraseña.value === datosRegistro[i].contraseña) {
+            let buscar = datosRegistro.find(datosUsuario => correo.value === datosUsuario.correo && contraseña.value === datosUsuario.contraseña);
+            if (buscar) {
+                mensajes.textContent = 'Redireccionando...';
+                setTimeout(() => {
                     window.location.href = 'index.html';
-                } else {
-                    mensajes.textContent = 'No se ha encontrado el usuario';
-                }
+                }, 1000);
+            } else {
+                mensajes.textContent = 'No se ha encontrado el usuario';
             }
         } else {
             mensajes.textContent = 'Ingrese un correo valido';
