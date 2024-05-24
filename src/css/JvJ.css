@@ -93,7 +93,7 @@ body{
     box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
     margin-bottom: 15px;
     font-size: 22px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
     font-weight: bolder;
     background-color: #eef9ff;
 }
@@ -110,7 +110,7 @@ body{
     border-radius: 5px;
     box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
     font-size: 22px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
     font-weight: bolder;
     background-color: #eef9ff;
 }
@@ -129,7 +129,7 @@ body{
     border-radius: 7px;
     box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
     font-size: 22px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
     font-weight: bolder;
     background-color: #eef9ff;
 }
