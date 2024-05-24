@@ -6,23 +6,30 @@
     <title>Index</title>
     <link rel="stylesheet" href="./src/css/index.css">
 </head>
-<body onload="victorias()">
-    <div id="usuario">lol</div>
+<body onload="victorias(), mostrarHora()">
+    <div id="sesion">
+        <div id="usuario"></div>
+        <button id="cerrarSesion">Cerrar sesión</button>
+    </div>
     <div id="contador">
-        <div>
+        <div class="contadorEstilos">
             <div>Victorias JvJ</div>
-            <div>
+            <div class="conta">
                 <div>🍎:</div>
                 <div class="JvJ"></div>
+            </div>
+            <div class="conta">
                 <div>🍐:</div>
                 <div class="JvJ"></div>
             </div>
         </div>
-        <div>
+        <div class="contadorEstilos">
             <div>Victorias JvCPU</div>
-            <div>
+            <div class="conta">
                 <div>🍎:</div>
                 <div class="JvCPU"></div>
+            </div>
+            <div class="conta">
                 <div>🍐:</div>
                 <div class="JvCPU"></div>
             </div>
@@ -35,6 +42,8 @@
             <a class="linksEstilos" href="JvCPU.html">Jugador vs CPU</a>
         </div>
     </div>
+
+    <div id="reloj"></div>
 
     <script src="./src/js/index.js"></script>
 </body>

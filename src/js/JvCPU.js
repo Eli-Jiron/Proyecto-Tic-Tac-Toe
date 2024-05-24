@@ -95,7 +95,6 @@ function bot() {
         //Genera dos números del 0 al 2 de forma aleatoria y los envía como parametros a juegoBot()
         fila = Math.floor(Math.random() * 3);
         columna = Math.floor(Math.random() * 3);
-        console.log(fila, columna);
         juegoBot(fila,columna);
     }
 }
