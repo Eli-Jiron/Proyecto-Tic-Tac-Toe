@@ -1,7 +1,9 @@
 body{
     user-select: none;
     text-align: center;
-    background-color: #fffaf6;
+    background-image: url(/Proyecto-Tic-Tac-Toe/src/img/bg5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
 }
 
@@ -99,7 +101,7 @@ body{
 
 .fuente {
     font-size: 22px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
     font-weight: bolder;
 }
 
@@ -125,4 +127,27 @@ body{
     border-color: rgb(250, 217, 51);
     border-radius: 5px;
     box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+}
+
+#link {
+    display: flex;
+    justify-content: left;
+}
+
+#linkEstilo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 75px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-family: cursive;
+    font-weight: bolder;
+    color: black;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 7px;
 }
