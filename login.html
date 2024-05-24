@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="./src/css/login.css">
 </head>
 <body>
-    <form>
-        <div>Correo</div>
-        <input id="correo" type="email">
-        <div>Contraseña</div>
-        <input id="contraseña" type="password">
-    </form>
-    <div id="mensajes"></div>
-    <button id="btnInicioSesion">Iniciar sesión</button>
-    <a href="register.html">Registrarse</a>
+    <div id="formulario">
+        <div id="formularioEstilos">
+            <div  id="titulo">Iniciar Sesión</div>
+            <form>
+                <div>Correo</div>
+                <input id="correo" type="email">
+                <div>Contraseña</div>
+                <input id="contraseña" type="password">
+            </form>
+            <div id="mensajes"></div>
+            <button id="btnInicioSesion">Iniciar sesión</button>
+            <a id="link" href="register.html">< Registrarse ></a>
+        </div>
+    </div>
 
     <script src="./src/js/login.js"></script>
 </body>

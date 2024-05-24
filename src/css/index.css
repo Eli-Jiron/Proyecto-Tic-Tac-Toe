@@ -3,6 +3,7 @@ body{
     background-image: url(/Proyecto-Tic-Tac-Toe/src/img/bg5.png);
     background-repeat: no-repeat;
     background-size: cover;
+    user-select: none;
 }
 
 #inicio {
